@@ -1,0 +1,11 @@
+# DEBIAN BUILD DOCKERFILE BASED ON DEBIAN BASE IMAGE
+# TO RUN SHELL IN IMAGE ENTER `docker run --entrypoint /bin/bash -it <image>`
+
+ARG DEBIAN
+
+FROM $DEBIAN as release
+
+ENV VERSION=1
+
+# INSTALL BUILD UTILS AND LIBRARIES
+RUN apt-install build-essential
