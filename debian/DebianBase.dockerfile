@@ -3,9 +3,9 @@
 
 FROM amd64/debian:testing as release
 
-COPY debian-base/tools/* /usr/local/bin/
+COPY debian/tools/* /usr/local/bin/
 
-COPY debian-base/config/sources.list /etc/apt/sources.list
+COPY debian/config/sources.list /etc/apt/sources.list
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ Etc/UTC
