@@ -29,6 +29,6 @@ RUN update-ca-certificates
 ENV SSL_CERT_DIR="/etc/ssl/certs"
 
 # INSTALL UTILS
-RUN apt-install wget curl vim
+RUN apt-install wget curl vim procps
 
 COPY --from=docker /usr/local/bin/docker /usr/local/bin/docker
