@@ -75,7 +75,7 @@ upload-imagemagick: build-imagemagick
 
 build-autopublisher-base:
 	docker build -t $(AUTOPUBLISHER_BASE) \
-		--build-arg DEBIAN=$(DEBIAN_BASE) \
+		--build-arg DEBIAN_IMAGEMAGICK=$(DEBIAN_IMAGEMAGICK) \
 		--file debian/AutopublisherBase.dockerfile \
 		--target release .
 

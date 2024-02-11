@@ -13,12 +13,12 @@ WORKDIR /tmp
 # INSTALL IMAGEMAGICK BUILD LIBRARIES
 RUN aptitude update &&  \
     aptitude install -y bzip2 cairosvg gir1.2-pangocairo-1.0-dev gsfonts-other libbzip3-dev  \
-    libdjvulibre-dev libdjvulibre21 libfontconfig-dev libfreetype-dev libfreetype6-dev  \
-    libgif-dev libgs-dev libgvc6 libheif-dev libjpeg-dev libjpeg62 libjxl-dev libjxl-devtools  \
-    liblcms2-dev liblqr-dev liblzma-dev libopenexr-dev libopenjp2-7-dev libpango1.0-dev  \
-    libperl-dev libpng-dev libraqm-dev libraw-dev librsvg2-dev libtiff-dev libtiff5-dev  \
-    libwebp-dev libwebpdemux2 libwebpmux3 libwmf-dev libxml2-dev libzip-dev libzstd-dev  \
-    libzstd1 pango1.0-tools wmf && \
+             libdjvulibre-dev libdjvulibre21 libfontconfig-dev libfreetype-dev libfreetype6-dev  \
+             libgif-dev libgs-dev libgvc6 libheif-dev libjpeg-dev libjpeg62 libjxl-dev libjxl-devtools  \
+             liblcms2-dev liblqr-dev liblzma-dev libopenexr-dev libopenjp2-7-dev libpango1.0-dev  \
+             libperl-dev libpng-dev libraqm-dev libraw-dev librsvg2-dev libtiff-dev libtiff5-dev  \
+             libwebp-dev libwebpdemux2 libwebpmux3 libwmf-dev libxml2-dev libzip-dev libzstd-dev  \
+             libzstd1 pango1.0-tools wmf && \
     aptitude clean
 
 # DOWNLOAD IMAGEMAGICK-7.1.1-27
@@ -29,12 +29,12 @@ RUN tar -xvzf ImageMagick-7.1.1-27.tar.gz
 WORKDIR ImageMagick-7.1.1-27
 RUN mkdir -p /app/ImageMagick-7.1.1-27/usr/local
 RUN ./configure --disable-shared --disable-installed --disable-openmp  \
-    --prefix=/app/ImageMagick-7.1.1-27/usr/local  \
-    --without-x --with-gslib --with-modules --with-bzlib -with-djvu --with-dps --with-fontconfig  \
-    --with-freetype --with-gslib --with-gvc --with-heic --with-jbig --with-jpeg --with-jxl  \
-    --with-dmr --with-lcms --with-lqr --with-lzma --with-magick-plus-plus --with-openexr  \
-    --with-openjp2 --with-pango --with-png --with-raqm --with-raw --with-rsvg --with-tiff  \
-    --with-webp --with-wmf --with-xml --with-zip --with-zlib --with-zstd
+                --prefix=/app/ImageMagick-7.1.1-27/usr/local  \
+                --without-x --with-gslib --with-modules --with-bzlib -with-djvu --with-dps --with-fontconfig  \
+                --with-freetype --with-gslib --with-gvc --with-heic --with-jbig --with-jpeg --with-jxl  \
+                --with-dmr --with-lcms --with-lqr --with-lzma --with-magick-plus-plus --with-openexr  \
+                --with-openjp2 --with-pango --with-png --with-raqm --with-raw --with-rsvg --with-tiff  \
+                --with-webp --with-wmf --with-xml --with-zip --with-zlib --with-zstd
 RUN make
 RUN make install
 

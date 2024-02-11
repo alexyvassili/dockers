@@ -18,7 +18,7 @@ RUN apt-get update &&  \
 RUN aptitude update && \
     aptitude upgrade -y && \
     aptitude install -y --without-recommends \
-          apt-transport-https openssl ca-certificates locales tzdata && \
+             apt-transport-https openssl ca-certificates locales tzdata && \
     locale-gen en_US.UTF-8 ru_RU.UTF-8 && \
     dpkg-reconfigure tzdata && \
     rm -fr /var/lib/apt/lists/* && \
