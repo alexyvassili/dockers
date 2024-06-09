@@ -10,9 +10,9 @@ endif
 CI_REGISTRY_SERVER ?= cr.yandex
 CI_REGISTRY ?= $(CI_REGISTRY_SERVER)/$(CI_REGISTRY_ID)
 
-BASE = "base"
-BUILD = "build"
-IMAGEMAGICK = "imagemagick"
+BASE = base
+BUILD = buil
+IMAGEMAGICK = imagemagick
 
 DEBIAN_BASE = $(CI_REGISTRY)/debian:$(BASE)
 DEBIAN_BUILD = $(CI_REGISTRY)/debian:$(BUILD)
